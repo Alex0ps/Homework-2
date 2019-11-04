@@ -1,4 +1,5 @@
-﻿using Ardalis.ListStartupServices;
+﻿                                            
+using Ardalis.ListStartupServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -226,7 +227,7 @@ namespace Microsoft.eShopWeb.Web
             // WTF WTF!!
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
-                ForwardedHeaders = ForwardedHeaders.XForwadedFor | ForwadedHeaders.XForwadedProto
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
             app.UseAuthentication();
 
