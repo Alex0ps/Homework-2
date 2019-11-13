@@ -6,4 +6,15 @@ services:
     build:
       context: .
       dockerfile: src/Web/Dockerfile
-
+    ports:
+          - "80:80"
+    depends_on:
+            - db
+  db:
+        image: "mcr.microsoft.com/mssql/server:2017-latest"
+        container_name: sqldb
+        environment:
+            SA_PASSWORD: "0147852369Main"
+            ACCEPT_EULA: "Y"
+        ports:
+          - "1433:1433"
